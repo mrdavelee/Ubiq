@@ -1,0 +1,29 @@
+header {
+    height: 52px;
+    display: block;
+    padding: 10px;
+    max-width: 1220px;
+    .logoContainer {
+        float: left;
+        img {
+            max-width: 150px;
+        }
+    }
+    .buttonContainer {
+        display: flex;
+        float: right;
+        .search, .menu {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $darkBlue;
+        }
+        .search {
+            background-color: $white;
+            margin-right: 10px;
+        }
+        .menu {
+            background-color: $darkBlue;
+        }
+    }
+}

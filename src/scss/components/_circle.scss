@@ -1,0 +1,15 @@
+.circle {
+    background-color: $red;
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    span {
+        font-size: 35px;
+    }
+}

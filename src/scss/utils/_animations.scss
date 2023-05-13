@@ -1,6 +1,7 @@
-@keyframes slideInFromBottom {
+@keyframes slideInFromTop {
     0% {
-        transform: translateY(100%);
+        transform: translateY(-5%);
+        display: none;
     }
     100% {
         transform: translateY(0);
@@ -22,28 +23,10 @@
     }
 }
 
-@keyframes slideInFromBottomWithOffset {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(-10%);
-    }
-}
-
-@keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInFromTopWithOpacity {
+@keyframes slideInFromBottomWithOpacity {
     0% {
         display: none;
-        transform: translateY(-100%);
+        transform: translateY(100%);
         opacity: 0;
     }
     60% {

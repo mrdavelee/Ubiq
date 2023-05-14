@@ -11,5 +11,9 @@
             display: block;
             height: 100vh;
         }
+        .textSection {
+            display: flex;
+            flex-direction: row;
+        }
     }
 }

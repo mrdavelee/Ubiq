@@ -1,0 +1,54 @@
+.about {
+    .insetImg {
+        display: none;
+    }
+}
+
+@include breakAbove(sm) {
+    .about {
+        flex-direction: row;
+        display: flex;
+        position: relative;
+        background-image: url('../../dest/img/insignia.png');
+        background-size: contain;
+        .animationImgWrapper {
+            margin-right: 40px;
+            .insetImg {
+                width: auto;
+                height: auto;
+                display: block;
+            }
+        }
+        
+        .textSection {
+            width: 200vw;
+            display: flex;
+            flex-direction: column;
+            .text {
+                &.mob {
+                    display: none;
+                }
+                &.desk {
+                    font-size: 30px;
+                    line-height: 35px;                
+                }
+            }
+            .aboutTextWrapper {
+                display: flex;
+                flex-grow: 1;
+                flex-basis: 0;
+                min-width: 0;
+                gap: 30px;
+                & > * {
+                    width: 30%;
+                }
+                & + .aboutTextWrapper {
+                    .text {
+                        width: 40%;
+                    }
+                }
+            }
+            
+        }
+    }
+}

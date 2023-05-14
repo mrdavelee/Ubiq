@@ -74,9 +74,11 @@
             position: relative;
             .animationImgWrapper {
                 overflow: hidden;
-                position: relative;
-                
+                position: relative; 
                 animation: 1s ease-out 0s 1 slideInFromTop;
+                img {
+                    height: 100vh;
+                }
                 &::before {
                     content: '';
                     position: absolute;

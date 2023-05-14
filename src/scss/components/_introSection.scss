@@ -3,3 +3,13 @@
         padding: 10px;
     }
 }
+
+@include breakAbove(sm) {
+    .introSection {
+        display: flex;
+        > * {
+            display: block;
+            height: 100vh;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+
+.stickySectionWrapper {
+    .sticker {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        .horizontal {
+            display: flex;
+        }
+    }
+}

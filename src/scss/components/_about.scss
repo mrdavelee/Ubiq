@@ -1,8 +1,9 @@
 .about {
-    .insetImg {
-        &.hideOnMob {
-            display: none;
-        }
+    .hideOnMob {
+        display: none;
+    }
+    .aboutTextWrapper {
+        margin-bottom: 30px;
     }
 }
 
@@ -21,9 +22,11 @@
                 display: block;
             }
         }
-        
+        .hideOnMob {
+            display: block;
+        }  
         .textSection {
-            width: 200vw;
+            width: 100vw;
             display: flex;
             flex-direction: column;
             .text {
@@ -38,7 +41,7 @@
             .aboutTextWrapper {
                 display: flex;
                 gap: 30px;
-                justify-content: space-evenly;
+                justify-content: space-around;
                 & > * {
                     width: 30%;
                 }
@@ -62,7 +65,7 @@
 @include breakAbove(md) {
     .about {
         .textSection {
-            width: 150vw;
+            // width: 150vw;
         }
     }
 }
@@ -70,7 +73,7 @@
 @include breakAbove(xl) {
     .about {
         .textSection {
-            width: 100vw;
+            // width: 100vw;
         }
     }
 }

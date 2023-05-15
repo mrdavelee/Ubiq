@@ -17,6 +17,14 @@
                 width: auto;
                 height: auto;
                 display: block;
+                transform: translateX(-100%);
+                transition: transform 1s ease-out;
+            }
+            &.inView {
+                .insetImg {
+
+                    transform: translateX(0);
+                }
             }
         }
         
@@ -35,16 +43,20 @@
             }
             .aboutTextWrapper {
                 display: flex;
-                flex-grow: 1;
-                flex-basis: 0;
-                min-width: 0;
                 gap: 30px;
+                justify-content: space-evenly;
                 & > * {
                     width: 30%;
                 }
                 & + .aboutTextWrapper {
+                    .animationImgWrapper {
+                        position: relative;
+                        top: -50px;
+                    }
                     .text {
                         width: 40%;
+                        position: relative;
+                        top: 40px;
                     }
                 }
             }

@@ -1,16 +1,16 @@
 @keyframes slideInFromTop {
     0% {
-        transform: translateY(-5%);
+        max-height: 0;
         display: none;
     }
     100% {
-        transform: translateY(0);
+        max-height: 100%;
     }
 }
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-1%);
+        transform: translateX(-100%);
         display: none;
     }
     100% {
@@ -68,36 +68,44 @@
 .animationImgWrapper {
     overflow: hidden;
     position: relative; 
-    img {
-        height: 100vh;
-    }
-    &:not(.inView) {
-        &:before {
-            content: '';
-            background-color: $white;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-    }
+    // :not(.inView) {
+        // &:before {
+        //     content: '';
+        //     background-color: $white;
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        // }
+    // }
     &.slideUp {
         animation: 1s ease-out 0s 1 slideInFromTop;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: 1s ease-out 0s 1 translateHeight;
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     width: 100%;
+        //     height: 100%;
+        //     animation: 1s ease-out 0s 1 translateHeight;
+        // }
+    }
+    .about {
+        .inView {
+            img {
+                animation: 1s ease-out 0s 1 slideInFromLeft;
+            }
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 100%;
+            //     height: 100%;
+            //     animation: 1s ease-out 0s 1 translateWidthFromLeft;
+            // }
         }
     }
-    &.inView:not(&.slideUp) {
-        animation: 1s ease-out 0s 1 slideInFromLeft;
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: 1s ease-out 0s 1 translateWidthFromLeft;
+}
+@include breakAbove(sm) {
+    .animationImgWrapper {
+        img {
+            height: 100vh;
         }
     }
 }

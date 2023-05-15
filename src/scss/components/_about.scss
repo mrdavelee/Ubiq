@@ -58,3 +58,19 @@
         }
     }
 }
+
+@include breakAbove(md) {
+    .about {
+        .textSection {
+            width: 150vw;
+        }
+    }
+}
+
+@include breakAbove(xl) {
+    .about {
+        .textSection {
+            width: 100vw;
+        }
+    }
+}

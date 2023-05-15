@@ -68,44 +68,48 @@
 .animationImgWrapper {
     overflow: hidden;
     position: relative; 
-    // :not(.inView) {
-        // &:before {
-        //     content: '';
-        //     background-color: $white;
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        // }
-    // }
     &.slideUp {
         animation: 1s ease-out 0s 1 slideInFromTop;
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     width: 100%;
-        //     height: 100%;
-        //     animation: 1s ease-out 0s 1 translateHeight;
-        // }
     }
-    .about {
-        .inView {
+}
+.about {
+    .animationImgWrapper {
+        
+            overflow: hidden;
             img {
-                animation: 1s ease-out 0s 1 slideInFromLeft;
+                transform: translateY(-100%);
+                transition: transform 1s ease-out;
             }
-            // &::before {
-            //     content: '';
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 100%;
-            //     animation: 1s ease-out 0s 1 translateWidthFromLeft;
-            // }
+        
+        &.inView {
+            img {
+                transform: translateY(0);
+                // animation: 1s ease-out 0s 1 slideInFromTop;
+            }
         }
     }
 }
+
+
+
 @include breakAbove(sm) {
     .animationImgWrapper {
         img {
             height: 100vh;
+        }
+    }
+    .about {
+        .animationImgWrapper {
+            &:not(.inView) {
+                img {
+                    transform: translateX(-100%);
+                }
+            }
+            &.inView {
+                img {
+                    animation: 1s ease-out 0s 1 slideInFromLeft;
+                }
+            }
         }
     }
 }
